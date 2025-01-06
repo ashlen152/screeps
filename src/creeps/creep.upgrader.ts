@@ -1,4 +1,4 @@
-export const runUpgrader = (creep: Creep): void => {
+const run = (creep: Creep): void => {
   console.log("Running upgrader");
   if (creep.store[RESOURCE_ENERGY] === 0) {
     const sources = creep.room.find(FIND_SOURCES);
@@ -11,3 +11,4 @@ export const runUpgrader = (creep: Creep): void => {
     }
   }
 };
+export const upgraderCreep = { run };
