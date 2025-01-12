@@ -1,7 +1,8 @@
-const run = (creep: Creep): void => {
-  console.log("Running builder");
-};
+const bodyParts = [CARRY, WORK, MOVE];
+
+const run = (creep: Creep): void => { };
 
 export const builderCreep = {
-  run
+  run,
+  bodyParts
 };

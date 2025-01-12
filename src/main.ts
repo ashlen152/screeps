@@ -1,5 +1,5 @@
 import { ErrorMapper, clearMemoryCreeps } from "utils";
-import { builderCreep, harvesterCreep, haulingCreep, upgraderCreep } from "creeps";
+import { builderCreep, harvesterCreep, haulerCreep, upgraderCreep } from "creeps";
 import { ERole } from "enum";
 import { RoomManager } from "managers";
 
@@ -26,8 +26,8 @@ export const loop = ErrorMapper.wrapLoop(() => {
       upgraderCreep.run(creep);
     } else if (creep.memory.role === ERole.builder) {
       builderCreep.run(creep);
-    } else if (creep.memory.role === ERole.hauling) {
-      haulingCreep.run(creep);
+    } else if (creep.memory.role === ERole.hauler) {
+      haulerCreep.run(creep);
     }
   }
 });

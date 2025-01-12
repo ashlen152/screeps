@@ -1,5 +1,6 @@
+const bodyParts = [CARRY, MOVE, MOVE];
+
 const run = (creep: Creep): void => {
-  console.log("Running hauling");
   if (creep.store.getFreeCapacity() > 0) {
     const sources = creep.room.find(FIND_DROPPED_RESOURCES);
     if (creep.pickup(sources[0]) === ERR_NOT_IN_RANGE) {
@@ -23,6 +24,8 @@ const run = (creep: Creep): void => {
     }
   }
 };
-export const haulingCreep = {
-  run
+
+export const haulerCreep = {
+  run,
+  bodyParts
 };
